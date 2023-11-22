@@ -8,7 +8,7 @@ let currentPlayer = 1;
 
 field.addEventListener('keyup', function(event) {
     if (event.key === 'Enter') {
-        let cityName = field.value.toUpperCase();
+        let cityName = field.value.trim().toUpperCase();
         let lastLetter = cities.length === 0 ? '' : cities[cities.length - 1].charAt(cities[cities.length - 1].length - 1);
 
         if (cities.includes(cityName)) {
